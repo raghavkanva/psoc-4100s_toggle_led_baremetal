@@ -1,4 +1,4 @@
-#  Bare-Metal GPIO & Interrupt Handling on CY8CKIT-149 (PSoC 4100S)
+#  Bare-Metal Functionalities GPIO & Interrupt Handling on CY8CKIT-149 (PSoC 4100S)
 
 This project demonstrates **bare-metal programming** on the **Infineon CY8CKIT-149 PSoC 4100S** board without using CMSIS, HAL, or PDL libraries.  
 The objective is to **toggle an LED sequence when a button press interrupt is detected**, implemented entirely using **direct register-level programming**.
@@ -53,7 +53,5 @@ Fixing this completed the functionality and highlighted the importance of **syst
 I sincerely thank **Balajee Sir, Balasubramanian Lakshminarayanan Sir, and Prakash Sir** for their constant support and motivation.  
 I would also like to thank **Vinay Sir, Ananth Sir, Siddesh Sir, and Vijaykumar Sir** for their dedicated teaching and guidance.
 
----
 
-## 📂 Repository Structure
 
