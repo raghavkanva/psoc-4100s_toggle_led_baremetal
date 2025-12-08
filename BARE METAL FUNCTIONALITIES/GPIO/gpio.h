@@ -26,7 +26,7 @@ typedef struct
     _IOM uint32_t INTR;     // Port interrupt status register
     uint32_t reserved0;
     _IOM uint32_t PC2; // Port configuration register 2
-    uint32_t reserved1[10];
+    uint32_t reserved1[9]; //Changed Here
     _IOM uint32_t DR_SET; // Port output data set register
     _IOM uint32_t DR_CLR; // Port output data clear register
     _IOM uint32_t DR_INV; // Port output data clear register
