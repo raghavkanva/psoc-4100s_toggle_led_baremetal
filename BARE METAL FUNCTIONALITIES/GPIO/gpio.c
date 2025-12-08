@@ -1,4 +1,5 @@
 #include "gpio.h"
+volatile uint32_t invertFLag = 0;
 
 //This is an array for storing the pins and pads of LED's
 GPIO_LED_Config _led_iden[9] = {{1, 0}, {1, 2}, {1, 4}, {1, 6}, {2, 0}, {2, 2}, {5, 2}, {5, 5}, {5, 7}};
@@ -92,4 +93,9 @@ void GPIO_ClearInterrupt(uint32_t port, uint32_t pad){
 uint32_t GPIO_Read(uint32_t port){
     _GPIO_Port_Base_vect = GPIO_base_address + (port * 0x100);
     return GPIO(_GPIO_Port_Base_vect)->PS;
+}
+
+void GPIO_InvertOutput(uint32_t port, uint32_t pad){
+    _GPIO_Port_Base_vect = GPIO_base_address + (port * 0x100);
+     GPIO(_GPIO_Port_Base_vect)->DR_INV |= (1 << pad);
 }
